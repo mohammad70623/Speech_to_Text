@@ -3,4 +3,9 @@ import sounddevice as sd
 import soundfile as sf
 from groq import Groq
 from dotenv import load_dotenv
-import tempfile
+import tempfile 
+
+# Load Groq API key
+load_dotenv()
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+client = Groq(api_key=GROQ_API_KEY)
