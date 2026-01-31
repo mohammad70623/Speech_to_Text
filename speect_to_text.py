@@ -32,3 +32,8 @@ def transcribe(file_path):
         )
     return transcription.text
 
+
+if __name__ == "__main__":
+    audio_file = record_audio(duration=5)  # 5 seconds voice
+    text = transcribe(audio_file)
+    print("\nYou said:", text)
